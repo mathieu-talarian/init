@@ -1,3 +1,3 @@
 #! /bin/sh
 
-netstat -rn | grep default | sed -n '1p'
+netstat -rn | grep "default" | sed -n '1p'
