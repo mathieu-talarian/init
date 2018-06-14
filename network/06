@@ -1,0 +1,5 @@
+#! /bin/sh
+
+cat /etc/resolv.conf | grep nameserver
+
+#https://wiki.archlinux.fr/resolv.conf

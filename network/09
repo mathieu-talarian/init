@@ -1,0 +1,2 @@
+nslookup 42.fr
+nslookup 42.fr 8.8.8.8

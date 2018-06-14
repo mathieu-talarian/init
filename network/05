@@ -1,0 +1,5 @@
+#! /bin/sh
+
+nslookup slash16.org | grep Address | sed -n '1!p'
+
+# host -a slash16.org | slash16.org.
