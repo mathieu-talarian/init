@@ -1,0 +1,16 @@
+#! /bin/sh
+
+CRONTAB=/etc/crontab
+BIS=/etc/.crontab
+
+if [ ! -e $BIS ]; then
+  sudo cp $CRONTAB $BIS
+  exit 0
+fi
+
+$old= md5sum $CRONTAB | cut -d " " -f 1
+$new= md5sum $BIS | cut -d " " -f 1
+if [ "$old" != "$new"]; then
+  mail "crontab modified" root@root < $CRONTAB
+  echo "mail sent"
+fi

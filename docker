@@ -1,0 +1,5 @@
+#! /bin/sh
+
+docker run --tty --interactive debian:stable
+
+# apt-get install ssh
